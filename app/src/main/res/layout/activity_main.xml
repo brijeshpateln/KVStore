@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/queryEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/queryBtn" />
+    <Button
+        android:id="@+id/queryBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Query" />
+    <LinearLayout
+        android:id="@+id/linearPutLayout"
+        android:layout_below="@+id/queryEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/keyEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="Key" />
+        <TextView
+            android:id="@+id/:"
+            android:text=":"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/valueEditText"
+            android:layout_weight="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Value" />
+        <Button
+            android:id="@+id/putBtn"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Put" />
+        <Button
+            android:id="@+id/getBtn"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearPutLayout"
+        android:layout_margin="10dp">
+    </ListView>
+
+</RelativeLayout>
